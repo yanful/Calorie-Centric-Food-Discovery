@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search the food plan for you!</title>
+	<style>
+		body {
+		background-image: url("https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80");
+ 		background-repeat: no-repeat;
+  		background-size: cover;
+		}
+	</style>
+</head>
+<body>
+{% for g in x %}
+	<div class ='food_list'>
+		<p style="color:white;">Title: {{g.title}}</p>
+		<p style="color:white;">Calories: {{g.calories}}</p>
+		<p style="color:white;">Fat: {{g.fat}}</p>
+		<p style="color:white;">carbs: {{g.carbs}}</p>
+		<a href="https://spoonacular.com/recipes/{{g.title}}-{{g.id}}">
+			<img src="{{g.make_photo_url()}}" alt ="g.id" >
+		</a>
+	</div>
+{% endfor %}
+<p style="color:white;"><a href='/'>Search some plan else?</a></p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search the food plan for you!</title>
+</head>
+<body>
+<form action = "gresponse" method = "POST">
+	<label for="minimum_calories"> Please enter the minimum calories you want:</label>
+	<input type="text" id="minimum_calories" name="search_foodplan_min" /><br />
+	<label for="maximum_calories"> Please enter the maximum calories you want:</label>
+	<input type="text" id="maximum_calories" name="search_foodplan_max" /><br />
+	<input type="submit" value="Search for the food plan " name="gobtn"/> </form>
+	<h1>Search the food plan for you!</h1>
+	<h1>Examples (600 - 800 calories food plan)</h1>
+	<div class='webpage'>
+		{% for n in wholelist %}
+		<p>{{n["title"]}}</p>
+		<img src="{{n.make_photo_url()}}" alt ="n.id" >
+		{% endfor %}
+	</div>
+</body>
+</html>

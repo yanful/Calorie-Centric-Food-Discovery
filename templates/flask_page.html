@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search the food plan for you!</title>
+	<style>
+		body {
+		background-image: url("https://cdn.wallpapersafari.com/45/69/tp9DL2.jpg");
+ 		background-repeat: no-repeat;
+  		background-size: cover;
+		}
+	</style>
+</head>
+<body>
+<h2>You can choose to search the food plan by calories, carbohydrates, and fat.</h2>
+<h2>You can ask any question you want</h2>
+<form action = "gresponse" method = "POST">
+	<label for="minimum_calories"> Please enter the minimum calories you want:</label>
+	<input type="text" id="minimum_calories" name="search_foodplan_min" /><br />
+	<label for="maximum_calories"> Please enter the maximum calories you want:</label>
+	<input type="text" id="maximum_calories" name="search_foodplan_max" /><br />
+	<input type="submit" value="Search for the food plan " name="gobtn"/> </form>
+{% if prompt %}
+<div class= 'formtitle'>{{prompt}}</div>
+{% endif %}
+<form action = "gc" method = "POST">
+	<label for="minimum_carbohydrates"> Please enter the minimum carbohydrates you want:</label>
+	<input type="text" id="minimum_carbohydrates" name="search_carbohydrates_min" /><br />
+	<label for="maximum_carbohydrates"> Please enter the maximum carbohydrates you want:</label>
+	<input type="text" id="maximum_carbohydrates" name="search_carbohydrates_max" /><br />
+	<input type="submit" value="Search for the food plan " name="gobtn"/> </form>
+{% if carbohydrates %}
+<div class= 'formtitle'>{{carbohydrates}}</div>
+{% endif %}
+<form action = "gf" method = "POST">
+	<label for="minimum_fat"> Please enter the minimum fat you want:</label>
+	<input type="text" id="minimum_fat" name="search_fat_min" /><br />
+	<label for="maximum_fat"> Please enter the maximum fat you want:</label>
+	<input type="text" id="maximum_fat" name="search_fat_max" /><br />
+	<input type="submit" value="Search for the food plan " name="gobtn"/> </form>
+{% if fat %}
+<div class= 'formtitle'>{{fat}}</div>
+{% endif %}
+<form action = "gr" method = "POST">
+	<label for="search"> Question:</label>
+	<input type="text" id="search" name="search_result" /><br />
+	<input type="submit" value="Search for your question" name="gobtn"/> </form>
+{% if theanswer %}
+<div class= 'formtitle'>{{theanswer}}</div>
+{% endif %}
+	<h1>Search the food plan for you!</h1>
+	<h3>Here is the 600 - 800 calories food plan:</h3>
+	<div class='webpage'>
+		
+		<p>Jumbo Size Yogurt Marble Cupcakes</p>
+		<img src="https://spoonacular.com/recipeImages/648652-312x231.jpg" alt ="n.id" >
+		
+		<p>Chicken Liver Salad</p>
+		<img src="https://spoonacular.com/recipeImages/638166-312x231.jpg" alt ="n.id" >
+		
+		<p>Easy Chicken Fricassee</p>
+		<img src="https://spoonacular.com/recipeImages/511785-312x231.jpg" alt ="n.id" >
+		
+		<p>Green Chili Cheddar Dip (Guest Post)</p>
+		<img src="https://spoonacular.com/recipeImages/715602-312x231.png" alt ="n.id" >
+		
+		<p>Classic Matzo Ball Soup</p>
+		<img src="https://spoonacular.com/recipeImages/639616-312x231.jpg" alt ="n.id" >
+		
+		<p>Loaded Baked Potato Salad</p>
+		<img src="https://spoonacular.com/recipeImages/715537-312x231.jpg" alt ="n.id" >
+		
+		<p>Italian Pasta Salad with organic Arugula</p>
+		<img src="https://spoonacular.com/recipeImages/648190-312x231.jpg" alt ="n.id" >
+		
+		<p>Korean Extra Crispy Fried Chicken w Sweet Spicy Glaze</p>
+		<img src="https://spoonacular.com/recipeImages/649049-312x231.jpg" alt ="n.id" >
+		
+		<p>Roll Up Eggplant Lasagna</p>
+		<img src="https://spoonacular.com/recipeImages/658743-312x231.jpg" alt ="n.id" >
+		
+		<p>Mushroom Goat Cheese Baked Eggs</p>
+		<img src="https://spoonacular.com/recipeImages/782619-312x231.png" alt ="n.id" >
+		
+	</div>
+</body>
+</html>
